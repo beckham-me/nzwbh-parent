@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>nzwbh-parent</artifactId>
+        <groupId>com.xs.nzwbh</groupId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>service-client</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>service-user-client</module>
+        <module>service-crop-client</module>
+        <module>service-pest-client</module>
+        <module>service-announcement-client</module>
+        <module>service-search-client</module>
+        <module>service-admin-client</module>
+        <module>service-ai-client</module>
+        <module>service-map-client</module>
+        <module>service-aillm-client</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.xs.nzwbh</groupId>
+            <artifactId>common-utils</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.xs.nzwbh</groupId>
+            <artifactId>model</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- 服务调用feign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
